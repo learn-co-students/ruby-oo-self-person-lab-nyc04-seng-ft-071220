@@ -62,7 +62,7 @@ class Person
     def call_friend(friend)
         @happiness += 3
         friend.happiness += 3
-        self.happiness = happiness #some doubt here, it applied to both instances and I don't know why.
+        self.happiness = happiness 
         convo = "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
 
