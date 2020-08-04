@@ -45,24 +45,20 @@ class Person
     end
 
     def take_bath
-        @hygiene += 4
-        self.hygiene = hygiene     #Need to dive deeper into this
+        self.hygiene += 4   #Need to dive deeper into this
         "♪ Rub-a-dub just relaxing in the tub ♫"
         # binding.pry
     end
 
     def work_out
-        @hygiene -= 3
-        self.hygiene = hygiene
-        @happiness += 2
-        self.happiness = happiness
+        self.hygiene -= 3
+        self.happiness += 2
         "♪ another one bites the dust ♫"
     end
 
     def call_friend(friend)
-        @happiness += 3
+        self.happiness += 3
         friend.happiness += 3
-        self.happiness = happiness 
         convo = "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
 
