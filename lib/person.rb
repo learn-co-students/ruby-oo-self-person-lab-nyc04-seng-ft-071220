@@ -67,12 +67,9 @@ class Person
     def start_conversation (person, topic)
         convo = [person, self]
         if topic == 'politics'
-
-            def helper_method(*math_oper, *points)
             convo.each do |being|
-                being.happiness math_oper points
+                being.happiness -= 2
             end 
-            helper_method.send :helper_method, -=, 2
             'blah blah partisan blah lobbyist'
 
         elsif topic == 'weather'
