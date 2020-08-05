@@ -60,10 +60,33 @@ class Person
         self.hygiene -= 3
         self.happiness += 2
         '♪ another one bites the dust ♫'
+    end
 
+    def call_friend(friend)
+        @happiness += 3
+        friend.happiness += 3
+        "Hi #{friend.name}! It's #{self.name}. How are you?"
+    end
+
+    def start_conversation(person, topic)
+        if topic == "politics"
+           
+            'blah blah partisan blah lobbyist'
+            @happiness -= 2
+        end
+        if topic == "weather"
+            'blah blah sun blah rain'
+            @happiness += 1
+        end
+
+        if topic == "other"
+            'blah blah blah blah blah'
+        end
 
 
     end
+
+
 
 end
 
