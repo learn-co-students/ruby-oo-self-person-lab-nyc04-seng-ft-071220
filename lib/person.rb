@@ -77,5 +77,6 @@ class Person
 end
 
 sam = Person.new("Sam")
-
-
+p sam.happiness
+p sam.happiness += 4
+p sam.happiness
