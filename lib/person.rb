@@ -2,8 +2,9 @@
 require 'pry'
 class Person
 
-    attr_reader :name 
+    
     attr_accessor :bank_account, :happiness, :hygiene
+    attr_reader :name 
 
     def initialize(name_arg)
         @name = name_arg
@@ -48,7 +49,7 @@ class Person
 
     def get_paid(salary)
         @bank_account = @bank_account + salary
-        p 'all about the benjamins'
+        'all about the benjamins'
     end
 
     def take_bath
@@ -63,7 +64,7 @@ class Person
     end
 
     def call_friend(friend)
-        @happiness += 3
+        self.happiness += 3
         friend.happiness += 3
         "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
@@ -72,19 +73,19 @@ class Person
         if topic == "politics"
             person.happiness -= 2
             self.happiness -= 2
-            'blah blah partisan blah lobbyist'
+            return 'blah blah partisan blah lobbyist'
             
         end
         if topic == "weather"
             person.happiness += 1
             self.happiness += 1
-            'blah blah sun blah rain'
+            return 'blah blah sun blah rain'
             
         end
 
-        if topic == "other"
-            'blah blah blah blah blah'
-        end
+        if topic != "weather" && topic != "politics"
+            return 'blah blah blah blah blah'
+    end
 
 
     end
